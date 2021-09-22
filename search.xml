@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>操作系统</title>
+      <link href="/2021/09/17/cao-zuo-xi-tong/"/>
+      <url>/2021/09/17/cao-zuo-xi-tong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、操作系统概论"><a href="#一、操作系统概论" class="headerlink" title="一、操作系统概论"></a>一、操作系统概论</h1><h2 id="1-1操作系统概述"><a href="#1-1操作系统概述" class="headerlink" title="1.1操作系统概述"></a>1.1操作系统概述</h2><h3 id="1-1-1-操作系统与计算机系统"><a href="#1-1-1-操作系统与计算机系统" class="headerlink" title="1.1.1 操作系统与计算机系统"></a>1.1.1 操作系统与计算机系统</h3><p><strong>计算机系统分为哪四层？从上向下看</strong></p><blockquote><ol><li>应用程序层：<strong>解决用户不同的应用问题</strong></li><li>支撑软件层：<strong>建立在操作系统改造和扩充过的机器上</strong>，提供扩展指令集，实现各种语言处理程序、数据库管理系统和其他系统程序。</li><li>系统软件层：<strong>最靠近硬件的一层软件</strong></li><li>计算机硬件层：<strong>操作系统赖以工作的基础</strong>，也是操作系统设计者可以使用的功能和资源</li></ol></blockquote><p><strong>系统软件与支撑、应用软件的区别？</strong></p><blockquote><p>应用软件：基于用户需求编写、安装的专用程序</p><p>支撑软件：实用程序、语言处理程序、数据库管理系统</p><p>系统软件：操作系统</p><p>操作系统与支撑、应用软件层次的区别：1、操作系统有权分配物理硬件资源。2、其它上层软件只能通过操作系统来使用资源</p><p>操作系统用于隔离硬件与其它上层软件</p></blockquote><p><strong>冯·诺伊曼体系结构包括哪几个部分？</strong></p><blockquote></blockquote><p><strong>操作系统的主要任务？分为几大任务？</strong></p><blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202109171948621.png" style="zoom:67%;"></blockquote><h3 id="1-1-2-操作系统的资源管理技术"><a href="#1-1-2-操作系统的资源管理技术" class="headerlink" title="1.1.2 操作系统的资源管理技术"></a>1.1.2 操作系统的资源管理技术</h3><p><strong>操作系统资源管理的主要技术包括？</strong></p><blockquote><p><strong>复用：</strong>多个进程共享有限的物理资源</p><p><strong>虚拟：</strong>把一个物理资源变成多个逻辑对应物</p><p><strong>抽象：</strong>屏蔽资源复杂性，提高资源易用性</p></blockquote><p><strong>资源复用分为哪两种？试举例说明</strong></p><blockquote><ul><li>空分复用：资源可以从空间上分割成更小的单元进行使用(内存/硬盘被划分成不同的单元/区域)</li><li>时分复用：•从时间上进行分割，形成时间片，确保在单一时间片内，进程对资源是独占的；中断、抢占、调度算法</li></ul></blockquote><p><strong>多道程序设计：</strong>多个进程共享硬件的技术</p><p><strong>什么是虚拟化?试举例说明</strong></p><blockquote><p>对资源进行转化、模拟或整合,把一个物理资源转变为逻辑上的多个对应物</p></blockquote><p><strong>什么是抽象？试举例说明</strong></p><blockquote><p>虚拟和复用比较：</p><ol><li>复用分割实际存在的物理资源，解决有限资源利用不充分的问题</li><li>虚拟创建假想的逻辑同类资源，解决有限资源不足的问题</li></ol></blockquote><p><strong>试列举说明组合使用资源管理的例子？</strong></p><blockquote><p>往往同时实施抽象和虚化技术</p><p>打印机：打印函数和虚拟多个设备|显示器</p></blockquote><h3 id="1-1-3-操作系统定义和作用"><a href="#1-1-3-操作系统定义和作用" class="headerlink" title="1.1.3 操作系统定义和作用"></a>1.1.3 操作系统定义和作用</h3><h3 id="1-1-4-操作系统功能和特性"><a href="#1-1-4-操作系统功能和特性" class="headerlink" title="1.1.4 操作系统功能和特性"></a>1.1.4 操作系统功能和特性</h3><h2 id="1-2操作系统形成与发展"><a href="#1-2操作系统形成与发展" class="headerlink" title="1.2操作系统形成与发展"></a>1.2操作系统形成与发展</h2><h2 id="1-3操作系统基础服务与用户接口"><a href="#1-3操作系统基础服务与用户接口" class="headerlink" title="1.3操作系统基础服务与用户接口"></a>1.3操作系统基础服务与用户接口</h2><h2 id="1-4结构和运行模型"><a href="#1-4结构和运行模型" class="headerlink" title="1.4结构和运行模型"></a>1.4结构和运行模型</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> MxY </category>
+          
+          <category> NoteBook </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+            <tag> NoteBook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>嵌入式系统</title>
       <link href="/2021/09/14/qian-ru-shi-xi-tong/"/>
       <url>/2021/09/14/qian-ru-shi-xi-tong/</url>
@@ -20,9 +49,9 @@
       
         <tags>
             
-            <tag> 嵌入式系统 </tag>
-            
             <tag> NoteBook </tag>
+            
+            <tag> 嵌入式系统 </tag>
             
         </tags>
       
