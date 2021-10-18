@@ -4,13 +4,54 @@
   
     
     <entry>
-      <title>操作系统第三章同步、通信与死锁</title>
+      <title>编译原理第6章	LR分析</title>
+      <link href="/2021/10/18/bian-yi-yuan-li-di-6-zhang-lr-fen-xi/"/>
+      <url>/2021/10/18/bian-yi-yuan-li-di-6-zhang-lr-fen-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第6章-LR分析"><a href="#第6章-LR分析" class="headerlink" title="第6章    LR分析"></a>第6章    LR分析</h1><h2 id="6-1自上而下分析及其LR分析概述"><a href="#6-1自上而下分析及其LR分析概述" class="headerlink" title="6.1自上而下分析及其LR分析概述"></a>6.1自上而下分析及其LR分析概述</h2><p>自上而下分析算法：能力强、构造复杂</p><p><strong>移进–归约</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181604032.png" style="zoom:67%;"><p><strong>活前缀是规范句型的前缀，但不包括句柄</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181607716.png" style="zoom: 67%;"><blockquote><p>规范推导：最右推导</p><p>规范句型</p><p>规范归约</p></blockquote><h3 id="LR分析"><a href="#LR分析" class="headerlink" title="LR分析"></a>LR分析</h3><blockquote><p>L：自左向右</p><p>R：最右推导</p></blockquote><p><strong>LR分析器模型</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181611963.png" style="zoom:67%;"><blockquote><p>ACTION：归约or移进</p><p>GOTO：归约后到达的状态</p></blockquote><p><strong>注意：归约后使用伪栈顶</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181616082.png" style="zoom:67%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181616833.png" style="zoom:67%;">]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译原理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NoteBook </tag>
+            
+            <tag> 编译原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>操作系统第三章	同步、通信与死锁</title>
       <link href="/2021/10/18/cao-zuo-xi-tong-di-san-zhang-tong-bu-tong-xin-yu-si-suo/"/>
       <url>/2021/10/18/cao-zuo-xi-tong-di-san-zhang-tong-bu-tong-xin-yu-si-suo/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="3-6死锁"><a href="#3-6死锁" class="headerlink" title="3.6死锁"></a>3.6死锁</h2><h3 id="3-6-1死锁产生"><a href="#3-6-1死锁产生" class="headerlink" title="3.6.1死锁产生"></a>3.6.1死锁产生</h3><blockquote><p><strong>进程推进顺序不当产生死锁</strong></p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181636221.png" style="zoom: 67%;"><blockquote><p><strong>PV操作不当产生死锁</strong>    P：通过    V：释放</p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181637338.png" style="zoom:67%;"><blockquote><p> <strong>资源分配不当引起死锁</strong></p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181642804.png" style="zoom:67%;"><blockquote><p><strong>对临时资源使用不加限制引起死锁</strong></p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181643943.png" style="zoom:67%;"><p><strong>死锁的定义：</strong>一个进程集合中的每个进程都在等待只能由集合中的其他的一个进程才能引发的事件，则称一组进程或系统此时发生了死锁</p><p>==无外力作用，无法向前推进那个==</p><p><strong>死锁产生的因素</strong></p><ol><li>与系统拥有的资源数量有关</li><li>与系统分配策略有关</li><li>已进程对资源的使用要求以及并发进程的推进顺序有关</li></ol><p><strong>处理死锁的基本方法</strong>：预防死锁、避免死锁、检测死锁、解除死锁</p><h3 id="3-6-2死锁防止"><a href="#3-6-2死锁防止" class="headerlink" title="3.6.2死锁防止"></a>3.6.2死锁防止</h3><p><strong>产生死锁的必要条件</strong></p><blockquote><p>if 死锁 then …</p></blockquote><p><strong>互斥条件：</strong>进程互斥使用资源</p><p><strong>占有和等待条件(部分分配条件)：</strong>申请新资源时不释放已占有的资源</p><p><strong>不剥夺条件：</strong>一个进程不能抢夺其他进程占有的资源</p><p><strong>循环等待条件(环路条件)：</strong>存在一组进程循环等待资源的现象</p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181851680.png" style="zoom:80%;"><p><strong>静态分配策略</strong></p><blockquote><p><strong>一个进程必须在执行前就申请他所需要的全部资源，并且直到它所需要的资源都得到满足后才开始执行</strong></p><p><strong>降低了资源利用率</strong></p><p>有些资源在较后的时间才使用，可能造成一个进程占有了一些几乎不用的资源而使得其它进程等待</p></blockquote><p><strong>层次分配策略</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181858548.png" style="zoom:67%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181858472.png" style="zoom:67%;"><p><strong>层次分配策略的缺点</strong></p><blockquote><p><strong>限制了新设备的增加</strong></p><p><strong>进程使用各类资源顺序与系统规定顺序不同是造成资源浪费</strong></p><p><strong>限制用户简单、自主编程</strong></p></blockquote><h3 id="3-6-3死锁避免"><a href="#3-6-3死锁避免" class="headerlink" title="3.6.3死锁避免"></a>3.6.3死锁避免</h3><p><strong>银行家算法</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181903981.png" style="zoom:67%;"><p><strong>安全状态</strong></p><blockquote><p>系统将按照某种<strong>安全序列</strong>为进程分配资源，直至每个进程都顺利完成</p><p>不存在这样的安全序列，则称系统处于不安全系列</p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181915311.png" style="zoom: 80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110181916071.png" style="zoom:80%;"><p><strong>算法缺陷</strong></p><blockquote><p><strong>很难在进程运行前知道其所需的资源最大量</strong></p><p><strong>系统的进程必须是无关的，相互之间没有同步要求</strong></p><p><strong>进程的个数和分配的资源数目应该是固定的</strong></p></blockquote><h3 id="3-6-4死锁检测和解除"><a href="#3-6-4死锁检测和解除" class="headerlink" title="3.6.4死锁检测和解除"></a>3.6.4死锁检测和解除</h3>]]></content>
       
       
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+            <tag> NoteBook </tag>
+            
+        </tags>
       
     </entry>
     
