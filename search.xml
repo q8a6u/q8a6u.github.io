@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>数据挖掘与机器学习--神经网络</title>
+      <link href="/2021/10/28/shu-ju-wa-jue-yu-ji-qi-xue-xi-shen-jing-wang-luo/"/>
+      <url>/2021/10/28/shu-ju-wa-jue-yu-ji-qi-xue-xi-shen-jing-wang-luo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第九讲-神经网络"><a href="#第九讲-神经网络" class="headerlink" title="第九讲 神经网络"></a>第九讲 神经网络</h1><h2 id="神经元模型"><a href="#神经元模型" class="headerlink" title="神经元模型"></a>神经元模型</h2><p><strong>神经网络的定义</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281610523.png" style="zoom:80%;"><p><strong>M-P神经元模型</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281613704.png" style="zoom:67%;"><p><strong>典型的激活函数</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281614001.png" style="zoom:80%;"><blockquote><p><strong>理想激活函数是阶跃函数</strong>, 0表示抑制神经元而1表示激活神经元<br>阶跃函数具有<strong>不连续、不光滑</strong>等不好的性质, <strong>常用的是 Sigmoid 函数</strong></p></blockquote><h2 id="感知机与多层网络"><a href="#感知机与多层网络" class="headerlink" title="感知机与多层网络"></a>感知机与多层网络</h2><p><strong>感知机</strong></p><blockquote><p>感知机由两层神经元组成, 输入层接受外界输入信号传递给输出层, 输出层是M-P神经元（激活函数为阶跃函数时亦称阈值逻辑单元）<br>感知机能够容易地<strong>实现逻辑与、或、非运算</strong></p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281618264.png" style="zoom:80%;"><p><strong>感知机学习</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281622279.png" style="zoom:80%;"><p><strong>感知机求解与、或、非问题</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281624940.png" style="zoom:80%;"><blockquote><h6 id="若两类模式线性可分-则感知机的学习过程一定会收敛；否则感知机的学习过程将会发生震荡"><a href="#若两类模式线性可分-则感知机的学习过程一定会收敛；否则感知机的学习过程将会发生震荡" class="headerlink" title="若两类模式线性可分, 则感知机的学习过程一定会收敛；否则感知机的学习过程将会发生震荡"></a>若两类模式线性可分, 则感知机的学习过程一定会收敛；否则感知机的学习过程将会发生震荡</h6><p>单层感知机的学习能力非常有限, 只能解决线性可分问题</p></blockquote><p><strong>多层感知机</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281626296.png" style="zoom:80%;"><blockquote><p>输出层与输入层之间的一层神经元, 被称之为<strong>隐层或隐含层</strong>, 隐含层和输 出层神经元都是具有激活函数的功能神经元</p></blockquote><p><strong>多层前馈网络</strong></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281628929.png" style="zoom:80%;"><h2 id="误差逆传播算法"><a href="#误差逆传播算法" class="headerlink" title="误差逆传播算法"></a>误差逆传播算法</h2><p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281630530.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281632004.png" style="zoom:80%;"></p><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281639390.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281640771.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281642773.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281643840.png" style="zoom:80%;"><blockquote><p><strong>伪代码描述</strong></p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281645040.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281647167.png" style="zoom:80%;"><p><strong>多层前馈网络表示能力</strong></p><blockquote><p>只需要一个包含足够多神经元的隐层, 多层前馈神经网络就能以任意精度逼近任 意复杂度的连续函数<br>[Hornik et al. ,  1989]</p></blockquote><p><strong>多层前馈网络局限</strong></p><blockquote><p>如何设置<strong>隐层神经元的个数</strong>仍然是个<strong>未决问题</strong>. 实际应用中通常使<strong>用“试错 法”调整</strong><br>神经网络由于强大的表示能力, <strong>经常遭遇过拟合</strong>. 表现为：训练误差持续降低, 但测试误差却可能上升</p></blockquote><p><strong>缓解过拟合的策略</strong></p><blockquote><p><strong>早停</strong>：在训练过程中, 若训练误差降低, 但验证误差升高, 则停止训练<br><strong>正则化</strong>：在误差目标函数中增加一项描述网络复杂程度的部分, 例如连接权 值与阈值的平方和</p></blockquote><h2 id="全局最小与局部最小"><a href="#全局最小与局部最小" class="headerlink" title="全局最小与局部最小"></a>全局最小与局部最小</h2><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281651176.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281652261.png" style="zoom:80%;"><h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><p><strong>深度学习模型</strong></p><blockquote><p>典型的深度学习模型就是很<strong>深层的神经网络</strong>. </p></blockquote><p><strong>模型复杂度</strong></p><blockquote><p>增加隐层<strong>神经元的数目 (模型宽度)</strong><br>增加<strong>隐层数目（模型深度）</strong><br>从增加模型复杂度的角度看, <strong>增加隐层的数目比增加隐层神经元的数目更有效. 这是因为增加隐层数不仅增加了拥有激活函数的神经元数目, 还增加了激活函数嵌套的层数.</strong></p></blockquote><p><strong>复杂模型难点</strong></p><blockquote><p>多隐层网络难以直接用经典算法（例如标准BP算法）进行训练, 因为误差在 多隐层内逆传播时, 往往会”发散”而不能收敛到稳定状态.</p></blockquote><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281656252.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281657087.png" style="zoom:80%;"><img src="https://gitee.com/cpicture/picture-1/raw/master/202110281657447.png" style="zoom:80%;">]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据挖掘与机器学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NoteBook </tag>
+            
+            <tag> 数据挖掘与机器学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编译原理第6章	LR分析</title>
       <link href="/2021/10/18/bian-yi-yuan-li-di-6-zhang-lr-fen-xi/"/>
       <url>/2021/10/18/bian-yi-yuan-li-di-6-zhang-lr-fen-xi/</url>
